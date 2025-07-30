@@ -1,0 +1,787 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "OData",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/CustomersV3": {
+      "get": {
+        "summary": "GetCustomersV3_FieldList_CrossCompany_GBSI_USSI",
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "dataAreaId,CustomerAccount"
+          },
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "(dataAreaId eq 'USSI' or dataAreaId eq 'GBSI')"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "PostCustomersV3",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {
+                "dataAreaId": "usmf",
+                "CustomerAccount": "PM-001",
+                "OrganizationName": "Postman Customer",
+                "CustomerGroupId": "30",
+                "AddressCountryRegionId": "USA",
+                "SalesCurrencyCode": "USD"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CustomersV3/$count": {
+      "get": {
+        "summary": "GetCustomersV3_CrossCompany_Count",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/CustomersV3(dataAreaId='usmf',CustomerAccount='PM-001')": {
+      "patch": {
+        "summary": "UpdateCustomersV3",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {
+                "OrganizationName": "Postman Customer Updated",
+                "NameAlias": "PostmanCustUpdated"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/CustomerGroups": {
+      "get": {
+        "summary": "GetCustomerGroups_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/GeneralLedgerCustInvoiceJournalHeaders": {
+      "get": {
+        "summary": "GetCustomerInvoiceJournalHeader_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/GeneralLedgerCustInvoiceJournalLines": {
+      "get": {
+        "summary": "GetCustomerInvoiceJournalLine_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/CustomerPaymentJournalHeaders": {
+      "get": {
+        "summary": "GetCustomerPaymentJournalHeaders_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/CustomerPaymentJournalLines": {
+      "get": {
+        "summary": "GetCustomerPaymentJournalLines_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/PaymentJournalLineSettledInvoices": {
+      "get": {
+        "summary": "GetPaymentJournalLineSettledInvoices_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/ExchangeRates": {
+      "get": {
+        "summary": "ExchangeRates_RateType_01092023",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "RateTypeName eq 'Average' and StartDate le 2023-09-01T23:59:59Z and EndDate ge 2023-09-01T00:00:00Z"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/ExpenseJournalHeaders": {
+      "get": {
+        "summary": "GetExpenseJournalHeaders_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/ExpenseJournalLines": {
+      "get": {
+        "summary": "GetExpenseJournalLines_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/FinancialDimensionSets": {
+      "get": {
+        "summary": "GetFinancialDimensionSets",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/FinancialDimensionValues": {
+      "get": {
+        "summary": "GetFinancialDimensionValues_RetailChannel",
+        "parameters": [
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "FinancialDimension eq 'Retailchannel' "
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/FreeTextInvoiceHeaders": {
+      "get": {
+        "summary": "GetFreeTextInvoiceHeaders_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/FreeTextInvoiceLines": {
+      "get": {
+        "summary": "GetFreeTextInvoiceLines_CrossCompany",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/ReleasedProductsV2": {
+      "get": {
+        "summary": "GetReleasedProducts_FieldList_CrossCompany_J00029",
+        "parameters": [
+          {
+            "name": "$select",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "ItemNumber,ProductType"
+          },
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          },
+          {
+            "name": "$filter",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "ItemNumber eq 'J00029'"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/ReleasedProductsV2/$count": {
+      "get": {
+        "summary": "GetReleasedProducts_CrossCompany_Count",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/VendorsV2": {
+      "get": {
+        "summary": "GetVendorsV2_CrossCompany_All",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/VendorsV2/$count": {
+      "get": {
+        "summary": "GetVendorsV2_CrossCompany_Count",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/VendorGroups": {
+      "get": {
+        "summary": "GetVendorGroups_CrossCompany_All",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/VendorGroups/$count": {
+      "get": {
+        "summary": "GetVendorGroups_CrossCompany_Count",
+        "parameters": [
+          {
+            "name": "cross-company",
+            "in": "query",
+            "required": false,
+            "schema": {
+              "type": "string"
+            },
+            "example": "true"
+          }
+        ],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/SystemUsers": {
+      "get": {
+        "summary": "GetSystemUsers",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "PostSystemUsers",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {
+                "UserID": "MyPostmanUserId",
+                "Alias": "MyUserId@MyDomain.com",
+                "Company": "GBSI",
+                "UserName": "MyPostmanUsername",
+                "UserInfo_language": "en-GB",
+                "Helplanguage": "en-us",
+                "EmailProviderID": "",
+                "AccountType": "ClaimsUser",
+                "NetworkDomain": "https://sts.windows.net/",
+                "Enabled": true
+              }
+            }
+          }
+        }
+      }
+    },
+    "/SecurityUserRoleAssociations": {
+      "get": {
+        "summary": "GetSystemSecurityUserRoleAssociation",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      },
+      "post": {
+        "summary": "PostSystemSecurityUserRoleAssociation",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        },
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "example": {
+                "UserId": "ARNIE",
+                "SecurityRoleIdentifier": "SYSSECSECURITYADMINISTRATOR",
+                "AssignmentStatus": "Enabled",
+                "AssignmentMode": "Manual",
+                "SecurityRoleName": "Security administrator"
+              }
+            }
+          }
+        }
+      }
+    },
+    "/DataManagementDefinitionGroups/Microsoft.Dynamics.DataEntities.InitializeDataManagement": {
+      "post": {
+        "summary": "Refresh Entities",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/data": {
+      "get": {
+        "summary": "data",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    },
+    "/$metadata": {
+      "get": {
+        "summary": "Metadata annotations",
+        "parameters": [],
+        "security": [
+          {
+            "bearerAuth": []
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Successful response"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "securitySchemes": {
+      "bearerAuth": {
+        "type": "http",
+        "scheme": "bearer"
+      }
+    }
+  },
+  "security": [
+    {
+      "bearerAuth": []
+    }
+  ]
+}

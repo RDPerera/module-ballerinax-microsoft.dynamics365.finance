@@ -12,6 +12,6 @@
 
 ## Examples
 
-The `{{MODULE_NAME_PC}}` connector provides practical examples illustrating usage in various scenarios. Explore these [examples](https://github.com/{{REPO_NAME}}/tree/main/examples/), covering the following use cases:
+The `microsoft.dynamics365.finance` connector provides practical examples illustrating usage in various scenarios. Explore these [examples](https://github.com/module-ballerinax-microsoft.dynamics365.finance/tree/main/examples/), covering the following use cases:
 
 [//]: # (TODO: Add examples)

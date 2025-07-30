@@ -27,11 +27,11 @@ plugins {
     id "com.gradle.enterprise" version "3.2"
 }
 
-rootProject.name = '{{REPO_NAME}}'
+rootProject.name = 'module-ballerinax-microsoft.dynamics365.finance'
 
-include ':{{MODULE_NAME_CC}}-ballerina'
+include ':microsoft.dynamics365.finance-ballerina'
 
-project(':{{MODULE_NAME_CC}}-ballerina').projectDir = file("ballerina")
+project(':microsoft.dynamics365.finance-ballerina').projectDir = file("ballerina")
 
 gradleEnterprise {
     buildScan {
