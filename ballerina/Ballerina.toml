@@ -1,12 +1,13 @@
 [package]
 distribution = "12"
-org = "ballerinax"
+org = "edotco"
 name = "microsoft.dynamics365.finance"
-version = "1.0.0"
+version = "1.0.2"
 license = ["Apache-2.0"]
 authors = ["Ballerina"]
-keywords = [] # TODO: Add keywords
-# icon = "icon.png" # TODO: Add icon
+keywords = ["Business Management/Finance", "Cost/Paid", "Vendor/Microsoft", "Dynamics365", "Finance"]
+icon = "../icon.png"
+license = ["Apache-2.0"]
 repository = "https://github.com/ballerina-platform/module-ballerinax-microsoft.dynamics365.finance"
 
 [build-options]

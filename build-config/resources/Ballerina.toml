@@ -1,6 +1,6 @@
 [package]
 distribution = "12"
-org = "ballerinax"
+org = "edotco"
 name = "microsoft.dynamics365.finance"
 version = "@toml.version@"
 license = ["Apache-2.0"]

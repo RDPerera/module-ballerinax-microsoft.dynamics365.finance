@@ -261,11 +261,10 @@ dependencies = [
 [[package]]
 org = "ballerina"
 name = "task"
-version = "2.11.0"
+version = "2.7.0"
 dependencies = [
 	{org = "ballerina", name = "jballerina.java"},
-	{org = "ballerina", name = "time"},
-	{org = "ballerina", name = "uuid"}
+	{org = "ballerina", name = "time"}
 ]
 
 [[package]]
@@ -288,17 +287,6 @@ modules = [
 ]
 
 [[package]]
-org = "ballerina"
-name = "uuid"
-version = "1.10.0"
-dependencies = [
-	{org = "ballerina", name = "crypto"},
-	{org = "ballerina", name = "jballerina.java"},
-	{org = "ballerina", name = "lang.int"},
-	{org = "ballerina", name = "time"}
-]
-
-[[package]]
 org = "ballerinai"
 name = "observe"
 version = "0.0.0"
@@ -311,9 +299,9 @@ modules = [
 ]
 
 [[package]]
-org = "ballerinax"
+org = "edotco"
 name = "microsoft.dynamics365.finance"
-version = "1.0.0"
+version = "1.0.2"
 dependencies = [
 	{org = "ballerina", name = "data.jsondata"},
 	{org = "ballerina", name = "http"},
@@ -321,6 +309,6 @@ dependencies = [
 	{org = "ballerinai", name = "observe"}
 ]
 modules = [
-	{org = "ballerinax", packageName = "microsoft.dynamics365.finance", moduleName = "microsoft.dynamics365.finance"}
+	{org = "edotco", packageName = "microsoft.dynamics365.finance", moduleName = "microsoft.dynamics365.finance"}
 ]
 
