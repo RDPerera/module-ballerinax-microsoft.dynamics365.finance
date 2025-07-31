@@ -87,36 +87,3 @@ remote isolated function getCustomersV3FieldListCrossCompanyGbsiUssi(...) return
 # Generate enhanced Ballerina client with remote methods and proper response types
 bal openapi -i docs/spec/openapi.json --mode client --client-methods remote -o ballerina
 ```
-
-## Results
-
-The enhanced client (`ballerina/client.bal`) now provides:
-
-### ✅ **Proper Response Types**
-- `CustomersV3Collection|error` instead of `error?`
-- `VendorsV2Collection|error` for vendor data
-- `ReleasedProductsV2Collection|error` for product data
-- Individual entity types for create/update operations
-- `string|error` for count operations
-
-### ✅ **Type Safety**
-- Full compile-time type checking
-- IntelliSense support in IDEs
-- Structured data access with proper field types
-
-### ✅ **Clean API**
-- Remote isolated functions for all operations
-- Clean parameter names (e.g., `crossCompany`, `selectFields`, `filter`)
-- Proper documentation for all methods and parameters
-
-### ✅ **OData Compliance**
-- Full OData query support (`$select`, `$filter`, `$top`, `$skip`, `$orderby`)
-- Cross-company data access capabilities
-- Metadata and service root endpoints
-
-### ✅ **Production Ready**
-- Error handling with structured error types
-- Authentication support (Bearer tokens)
-- Comprehensive entity coverage for Microsoft Dynamics 365 Finance
-
-The `openapi.json` file is now a complete, production-ready OpenAPI specification that generates fully functional Ballerina client code for Microsoft Dynamics 365 Finance integration.

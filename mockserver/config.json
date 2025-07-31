@@ -1,0 +1,107 @@
+{
+  "server": {
+    "host": "0.0.0.0",
+    "port": 8080,
+    "debug": true
+  },
+  "odata": {
+    "base_url": "https://your-org.cloud.onebox.dynamics.com/data",
+    "metadata_namespace": "Microsoft.Dynamics365.Finance"
+  },
+  "sample_data": {
+    "vendors": [
+      {
+        "dataAreaId": "USMF",
+        "VendorAccount": "V000001",
+        "OrganizationName": "Contoso Electronics",
+        "VendorGroupId": "10",
+        "AddressCountryRegionId": "US",
+        "PurchaseCurrencyCode": "USD",
+        "IsActive": true
+      },
+      {
+        "dataAreaId": "USMF",
+        "VendorAccount": "V000002",
+        "OrganizationName": "Fabrikam Supplies",
+        "VendorGroupId": "20",
+        "AddressCountryRegionId": "US",
+        "PurchaseCurrencyCode": "USD",
+        "IsActive": true
+      }
+    ],
+    "customers": [
+      {
+        "dataAreaId": "USMF",
+        "CustomerAccount": "C000001",
+        "OrganizationName": "Adventure Works",
+        "NameAlias": "AWorks",
+        "CustomerGroupId": "10",
+        "AddressCountryRegionId": "US",
+        "SalesCurrencyCode": "USD",
+        "PersonGender": "Unknown",
+        "CreditLimit": 50000.0,
+        "IsActive": true
+      },
+      {
+        "dataAreaId": "USMF",
+        "CustomerAccount": "C000002",
+        "OrganizationName": "Blue Yonder Airlines",
+        "NameAlias": "BlueYonder",
+        "CustomerGroupId": "20",
+        "AddressCountryRegionId": "US",
+        "SalesCurrencyCode": "USD",
+        "PersonGender": "Unknown",
+        "CreditLimit": 100000.0,
+        "IsActive": true
+      }
+    ],
+    "system_users": [
+      {
+        "UserId": "ADMIN",
+        "UserName": "admin",
+        "Email": "admin@company.com",
+        "IsActive": true
+      },
+      {
+        "UserId": "USER001",
+        "UserName": "testuser",
+        "Email": "testuser@company.com",
+        "IsActive": true
+      }
+    ],
+    "exchange_rates": [
+      {
+        "FromCurrencyCode": "USD",
+        "ToCurrencyCode": "EUR",
+        "ExchangeRateValue": 0.85,
+        "ValidFromDate": "2025-01-01T00:00:00Z",
+        "RateTypeId": "SPOT"
+      },
+      {
+        "FromCurrencyCode": "USD",
+        "ToCurrencyCode": "GBP",
+        "ExchangeRateValue": 0.75,
+        "ValidFromDate": "2025-01-01T00:00:00Z",
+        "RateTypeId": "SPOT"
+      },
+      {
+        "FromCurrencyCode": "EUR",
+        "ToCurrencyCode": "USD",
+        "ExchangeRateValue": 1.18,
+        "ValidFromDate": "2025-01-01T00:00:00Z",
+        "RateTypeId": "SPOT"
+      },
+      {
+        "FromCurrencyCode": "GBP",
+        "ToCurrencyCode": "USD",
+        "ExchangeRateValue": 1.33,
+        "ValidFromDate": "2025-01-01T00:00:00Z",
+        "RateTypeId": "SPOT"
+      }
+    ]
+  },
+  "logging": {
+    "level": "INFO",
+    "format": "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  }
+}
